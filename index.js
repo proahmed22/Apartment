@@ -1,8 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
 import apartmentModel from "./apartment.model.js";
-
+import cors from "cors";
 const app = express();
+
+
+app.use(cors())
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -52,6 +55,7 @@ app.get("/getAllApartments", (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   });
 });
+app.use(express.json());
 
 dbConnection();
 
