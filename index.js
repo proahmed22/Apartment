@@ -22,7 +22,7 @@ const dbConnection = () => {
 };
 
 app.post("/addApartment", (req, res) => {
-  const { title, space, address, details, code, price } = req.body;
+  const { title, space, address, details, code, price, image } = req.body;
 
   const newApartment = new apartmentModel({
     title,
@@ -30,6 +30,7 @@ app.post("/addApartment", (req, res) => {
     address,
     details,
     code,
+    image,
     price
   });
 
