@@ -21,6 +21,10 @@ const apartmentSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    image:{
+        type: String,
+        
+    },
     price: {
         type: String,
         required: true,
